@@ -22,9 +22,12 @@ import {
 } from "@chakra-ui/react";
 import { FaArrowRight } from "react-icons/fa";
 import { AddIcon } from "@chakra-ui/icons";
+import { goToDashboard, goToProfilePage } from "../Routes/Coordinator";
+import { useNavigate } from "react-router-dom";
 
 export function MenuLateral(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const navigate = useNavigate();
 
   return (
     <Box bg={"#5B8A95"} h={"85vh"} w={"20vw"} borderRadius={"40px"}>
@@ -32,8 +35,8 @@ export function MenuLateral(props) {
         <Image
           bg={"#F2F2F2"}
           borderRadius={"100%"}
-          w={"130px"}
-          h={"130px"}
+          w={"8vw"}
+          h={"8vw"}
           mt={"8vh"}
           mb={"1.5vh"}
           src={props.logoEmpresa}
@@ -45,10 +48,16 @@ export function MenuLateral(props) {
           w={"136px"}
           mb={"6px"}
           mt={"8vh"}
+          onClick={() => goToDashboard(navigate)}
         >
           {"Home"}
         </Button>
-        <Button borderRadius={"25px"} h={"24px"} w={"136px"}>
+        <Button
+          borderRadius={"25px"}
+          h={"24px"}
+          w={"136px"}
+          onClick={() => goToProfilePage(navigate)}
+        >
           {"Perfil"}
         </Button>
         <Box
@@ -118,7 +127,7 @@ export function MenuLateral(props) {
               </ModalBody>
 
               <ModalFooter>
-                <IconButton icon={<FaArrowRight/>} mr={3} onClick={onClose}>
+                <IconButton icon={<FaArrowRight />} mr={3} onClick={onClose}>
                   Enviar
                 </IconButton>
                 <Button onClick={onClose}>Cancelar</Button>

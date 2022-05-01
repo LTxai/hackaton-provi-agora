@@ -18,7 +18,7 @@ import { AiOutlineDown } from "react-icons/ai";
 import { BsGear } from "react-icons/bs";
 import { FiPower } from "react-icons/fi";
 import { HiOutlineBell } from "react-icons/hi";
-import { goToLoginPage } from "../Routes/Coordinator";
+import { goToConfigPage, goToHelpPage, goToLoginPage } from "../Routes/Coordinator";
 import logo from "../img/logo_Sustentae.png";
 import { useNavigate } from "react-router-dom";
 
@@ -51,8 +51,8 @@ export default function Header() {
           fontSize="20px"
           bg={"#C4C4C4"}
           borderRadius={"13px"}
-          mr={"30px"}
-          ml={"30px"}
+          mr={"15px"}
+          ml={"55px"}
           icon={<HiOutlineBell />}
         />
         <IconButton
@@ -62,13 +62,13 @@ export default function Header() {
           bg={"#F44434"}
           borderRadius={"13px"}
           color={"#fff"}
-          mr={"30px"}
+          mr={"15px"}
           onClick={() => goToLoginPage(navigate)}
           icon={<FiPower />}
         />
         <ButtonGroup>
           <IconButton
-            w={"76px"}
+            w={"40px"}
             h={"40px"}
             fontSize="20px"
             bg={"#C4C4C4"}
@@ -76,23 +76,26 @@ export default function Header() {
             borderRightRadius={"0px"}
             mr={"-10px"}
             icon={<BsGear />}
+            onClick={() => goToConfigPage(navigate)}
           />
           <Menu>
             <MenuButton
               as={Button}
               rightIcon={<AiOutlineDown />}
-              w={"44px"}
+              w={"40px"}
               h={"40px"}
               fontSize="18px"
               bg={"#97B932"}
               position="relative"
-              ml={"-50px"}
+              pl={"8px"}
               borderLeftRadius={"0px"}
               borderRightRadius={"13px"}
             />
             <MenuList>
-              <MenuItem>Configurações</MenuItem>
-              <MenuItem>Ajuda</MenuItem>
+              <MenuItem onClick={() => goToConfigPage(navigate)}>
+                Configurações
+              </MenuItem>
+              <MenuItem onClick={() => goToHelpPage(navigate)}>Ajuda</MenuItem>
             </MenuList>
           </Menu>
         </ButtonGroup>

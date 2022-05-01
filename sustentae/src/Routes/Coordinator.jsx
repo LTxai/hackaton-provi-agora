@@ -5,6 +5,15 @@ export const goToDashboard = (navigate) => {
 export const goToLoginPage = (navigate) => {
     navigate("/")
 }
-// export const goToErrorPage = (navigate) => {
-//     navigate("/*")
-// }
+export const goToProfilePage = (navigate) => {
+    navigate("/profile")
+}
+export const goToHelpPage = (navigate) => {
+    navigate("/help")
+}
+export const goToConfigPage = (navigate) => {
+    navigate("/config")
+}
+export const goToErrorPage = (navigate) => {
+    navigate("/*")
+}

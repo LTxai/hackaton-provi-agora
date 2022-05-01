@@ -1,4 +1,4 @@
-import { Badge, Flex, Grid, GridItem, Icon, Text } from "@chakra-ui/react";
+import { Badge, Box, Flex, Grid, GridItem, Icon, Text } from "@chakra-ui/react";
 import React from "react";
 import { BsLightningChargeFill } from "react-icons/bs";
 import { ImDroplet } from "react-icons/im";
@@ -9,7 +9,8 @@ export function Historico(props) {
       w={"22vw"}
       bg={"#97B932"}
       h={"fit-content"}
-      justify={"space-evenly"}
+      // justify={"space-evenly"}
+      align={"center"}
       pt={"3px"}
       pb={"3px"}
       borderRadius="10px"
@@ -21,18 +22,20 @@ export function Historico(props) {
         borderRadius={"10px"}
         padding={"3.5px"}
         w={"35px"}
-        textAlign={'center'}
+        textAlign={"center"}
+        justifySelf={"start"}
+        ml={"2px"}
       >
         {props.mesDeReferencia}
       </Badge>
-      <Text color={"#FFF"}>
+      <Flex ml={"15px"} align={"center"}>
         <Icon color={"#FBB11C"} as={BsLightningChargeFill} fontSize={"18px"} />
-        {props.consumoEnergiaMesReferencia}
-      </Text>
-      <Text color={"#FFF"}>
+        <Text color={"#FFF"}>{props.consumoEnergiaMesReferencia}</Text>
+      </Flex>
+      <Flex ml={"50px"} align={"center"}>
         <Icon color={"#3D4984"} as={ImDroplet} fontSize={"18px"} />
-        {props.consumoAguaMesReferencia}
-      </Text>
+        <Text color={"#FFF"}>{props.consumoAguaMesReferencia}</Text>
+      </Flex>
     </Flex>
   );
 }

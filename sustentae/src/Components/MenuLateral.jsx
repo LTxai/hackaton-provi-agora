@@ -39,6 +39,7 @@ export function MenuLateral(props) {
           h={"8vw"}
           mt={"8vh"}
           mb={"1.5vh"}
+          ml={"-22.5px"}
           src={props.logoEmpresa}
         />
         <Text color={"#F4F4F4"}>{props.nomeEmpresa}</Text>
@@ -48,6 +49,7 @@ export function MenuLateral(props) {
           w={"136px"}
           mb={"6px"}
           mt={"8vh"}
+          ml={"-22.5px"}
           onClick={() => goToDashboard(navigate)}
         >
           {"Home"}
@@ -56,6 +58,7 @@ export function MenuLateral(props) {
           borderRadius={"25px"}
           h={"24px"}
           w={"136px"}
+          ml={"-22.5px"}
           onClick={() => goToProfilePage(navigate)}
         >
           {"Perfil"}
@@ -64,6 +67,7 @@ export function MenuLateral(props) {
           w={"128px"}
           h={"172px"}
           mt={"6vh"}
+          ml={"-22.5px"}
           bgGradient={
             "linear(150.9deg, rgba(131, 123, 123, 0.324) -3.17%, rgba(214, 207, 207, 0.072) 103.12%)"
           }

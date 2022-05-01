@@ -37,7 +37,7 @@ export default function Header() {
         <Input
           type="tel"
           placeholder="Busque por algo..."
-          w={"30vw"}
+          w={"35vw"}
           h={"40px"}
           color={"#000"}
           border={"2px solid #000"}
@@ -52,7 +52,7 @@ export default function Header() {
           bg={"#C4C4C4"}
           borderRadius={"13px"}
           mr={"15px"}
-          ml={"55px"}
+          ml={"20px"}
           icon={<HiOutlineBell />}
         />
         <IconButton

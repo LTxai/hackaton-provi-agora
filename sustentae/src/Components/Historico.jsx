@@ -11,8 +11,8 @@ export function Historico(props) {
       h={"fit-content"}
       // justify={"space-evenly"}
       align={"center"}
-      pt={"3px"}
-      pb={"3px"}
+      pt={"2px"}
+      pb={"2px"}
       borderRadius="10px"
       mb="3.2px"
     >
@@ -28,7 +28,7 @@ export function Historico(props) {
       >
         {props.mesDeReferencia}
       </Badge>
-      <Flex ml={"15px"} align={"center"}>
+      <Flex ml={"15px"} align={"center"} w={'90px'}>
         <Icon color={"#FBB11C"} as={BsLightningChargeFill} fontSize={"18px"} />
         <Text color={"#FFF"}>{props.consumoEnergiaMesReferencia}</Text>
       </Flex>

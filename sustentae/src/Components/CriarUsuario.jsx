@@ -39,15 +39,15 @@ export function CriarUsuario(props) {
           </Box>
 
           <Box>
-            <FormLabel htmlFor="url">Senha</FormLabel>
+            <FormLabel htmlFor="password" mt={'13px'}>Senha</FormLabel>
             <InputGroup>
-              <Input type="url" id="url" placeholder="Escolha uma senha" />
+              <Input type="password" id="url" placeholder="Escolha uma senha" />
             </InputGroup>
-            <FormLabel htmlFor="url">Confirmar senha</FormLabel>
+            <FormLabel htmlFor="password" mt={'13px'}>Confirmar senha</FormLabel>
             <InputGroup>
-              <Input type="url" id="url" placeholder="Confirme sua senha" />
+              <Input type="password" id="url" placeholder="Confirme sua senha" />
             </InputGroup>
-            <FormLabel htmlFor="url">Qual seu melhor e-mail?</FormLabel>
+            <FormLabel htmlFor="url" mt={'13px'}>Qual seu melhor e-mail?</FormLabel>
             <InputGroup>
               <Input type="url" id="url" placeholder="Escreva seu e-mail" />
             </InputGroup>

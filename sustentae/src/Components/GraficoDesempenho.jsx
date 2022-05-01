@@ -35,6 +35,7 @@ export function GraficoDesempenho(props) {
           <StatLabel textAlign={"center"} mb="5px">
             Energia Elétrica
           </StatLabel>
+          
           <Flex align={"center"} justify="center">
             <StatNumber
               bg={"#97B932"}
@@ -43,17 +44,19 @@ export function GraficoDesempenho(props) {
               w={"80%"}
               borderRadius={"10px"}
               textAlign={"center"}
+              pt={'-2px'}
             >
               <Icon
                 color={"#FBB11C"}
                 as={BsLightningChargeFill}
                 fontSize={"18px"}
+                pt={'2px'}
               />
               {props.consumoEnergiaMesAtual}
             </StatNumber>
           </Flex>
           <Center>
-            <StatHelpText>
+            <StatHelpText textAlign={'center'}>
               <StatArrow
                 type="increase"
                 alignSelf={"center"}
@@ -87,13 +90,14 @@ export function GraficoDesempenho(props) {
               w={"80%"}
               borderRadius={"10px"}
               textAlign={"center"}
+              pb={'-2px'}
             >
-              <Icon as={ImDroplet} color={"#3D4984"} fontSize={"16px"} />
+              <Icon as={ImDroplet} color={"#3D4984"} fontSize={"18px"} pt={'2.5px'}/>
               {props.consumoAguaMesAtual}
             </StatNumber>
           </Flex>
 
-          <StatHelpText>
+          <StatHelpText textAlign={'center'}>
             <StatArrow type="increase" />
             {`${props.porcentagemEconomiaAgua} de economia`}
           </StatHelpText>

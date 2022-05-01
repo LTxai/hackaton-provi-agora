@@ -26,7 +26,7 @@ import itauLogo from "../../img/itau.png";
 import microsoftLogo from "../../img/microsoft.png";
 import peugeotLogo from "../../img/peugeot.png";
 import vwLogo from "../../img/volkswagen.png";
-import magaLogo from "../../img/magalogo.png"
+import magaLogo from "../../img/magalogo.png";
 
 export default function Dashboard() {
   const [isLargerThan1200] = useMediaQuery(["(min-width: 1200px)"]);
@@ -77,8 +77,14 @@ export default function Dashboard() {
                   logoEmpresa={americanasLogo}
                 />
                 <Ranking nomeEmpresa={"Dell "} logoEmpresa={dellLogo} />
-                <Ranking nomeEmpresa={"Magazine Luiza"} logoEmpresa={magaLogo} />
-                <Ranking nomeEmpresa={"Microsoft"} logoEmpresa={microsoftLogo}/>
+                <Ranking
+                  nomeEmpresa={"Magazine Luiza"}
+                  logoEmpresa={magaLogo}
+                />
+                <Ranking
+                  nomeEmpresa={"Microsoft"}
+                  logoEmpresa={microsoftLogo}
+                />
                 <Ranking nomeEmpresa={"Bradesco"} logoEmpresa={bradescoLogo} />
                 <Ranking nomeEmpresa={"Itaú"} logoEmpresa={itauLogo} />
                 <Ranking nomeEmpresa={"Peugeot"} logoEmpresa={peugeotLogo} />
@@ -91,7 +97,7 @@ export default function Dashboard() {
                 <CardBoasVindas
                   nomeEmpresa={"Amazon"}
                   mensagemEmpresa={
-                    "Vimos aqui que sua reputação em consumo consicente se manteve positiva, parabéns"
+                    "Vimos aqui que sua reputação em consumo consicente se manteve positiva, parabéns!"
                   }
                 />
               </GridItem>
